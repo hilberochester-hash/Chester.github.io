@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>
+                Chester
+        </title>
+</head>
+<body style="text-align:center; background-image: url('twirl.gif'); background-size:cover; background-position:center; background-attachment:fixed;">
+<br>
+<br>
+<br>
+
+<img id="changewordbutton" 
+    src="envelope2.png" 
+    alt="flower gif" 
+    style="display:block;margin-left:auto;margin-right:auto;width:250px;height:200px;">
+ 
+<h2 id="message" style="display:none;">
+        Will you be my Valentine?
+</h2>
+
+<button  id="changebutt"
+    onclick="changeWord()" 
+    style="display:block;margin-left:auto;margin-right:auto; font-family: Courier New; color: rgb(0, 0, 0); background-color: rgb(245, 130, 167);">HELLO!
+</button>
+
+<br><br>
+<div id="choices" style="display:none;">
+        <button onclick="yesClicked()"
+                style="background-color: lightgreen; padding:10px 20px;">
+        Yes
+        </button>
+
+        <button onclick="noClicked()"
+        style ="background-color: lightcoral;  padding:10px 20px;">
+        No
+        </button>
+</div> 
+
+<script>
+function changeWord() {
+ document.getElementById("changewordbutton").src = "bubu-dudu-sseeyall.webp";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("choices").style.display = "block";
+            document.getElementById("changebutt").style.display = "none";
+        }
+
+        function yesClicked() {
+             document.getElementById("changewordbutton").src = "suho-cat.webp";
+             document.getElementById("message").innerText = "Yay! 💕";
+        }
+
+        function noClicked() {
+            document.getElementById("changewordbutton").src = "cute-sad.webp";
+            document.getElementById("message").innerText = "Aww… maybe next time 😢";
+        }
+    </script>
+
+
+</body>
+</html>
